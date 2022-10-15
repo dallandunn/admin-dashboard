@@ -1,0 +1,39 @@
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar content";
+}
+
+ul {
+    list-style: none;
+}
+
+.header {
+    border: 1px solid black;
+    grid-area: header;
+}
+
+.sidebar {
+    border: 1px solid black;
+    grid-area: sidebar;
+}
+
+.sidebar-title {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    font-size: 1.5rem;
+    font-weight: 600px;
+    display: grid;
+}
+
+.content {
+    border: 1px solid black;
+    grid-area: content;
+}
