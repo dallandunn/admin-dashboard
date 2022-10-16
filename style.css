@@ -9,6 +9,11 @@ body {
         "sidebar content";
 }
 
+p, h4, h5, h1 {
+    margin: 0;
+    padding: 0;
+}
+
 ul {
     list-style: none;
 }
@@ -26,10 +31,11 @@ img {
 /* header */
 .header {
     grid-area: header;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
     display: grid;
     grid-template-rows: 1fr 1fr;
     padding-left: 40px;
+    width: 100%;
 }
 
 .header div {
@@ -115,8 +121,9 @@ input {
     border-radius: 30px;
     border: none;
     background-color: gray;
+    margin-left: 15px;
     padding-left: 10px;
-    width: 50%;
+    width: 70%;
     height: 25px;
 }
 
@@ -125,6 +132,7 @@ input {
     grid-area: sidebar;
     background-color: lightblue;
     color: white;
+    padding-left: 20px;
 }
 
 .sidebar-title {
@@ -132,6 +140,7 @@ input {
     align-items: center;
     gap: 10px;
     padding-top: 10px;
+    padding-left: 10px;
 }
 
 .sidebar-title img {
@@ -161,5 +170,91 @@ input {
 
 /* content */
 .content {
+    width: 100%;
+    padding: 50px 20px;
     grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: auto 1fr;
+    gap: 15px;
+    grid-template-areas: 
+        'projects announcements'
+        'projects trending';
+}
+
+.projects {
+    grid-area: projects;
+    padding: 0 10px;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project {
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.icons {
+    align-self: flex-end;
+}
+
+.icons img {
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+}
+
+.announcements {
+    grid-area: announcements;
+    margin-right: 20px;
+}
+
+.announcement {
+    margin: 20px 0px;
+    padding-left: 10px;
+    width: 85%;
+}
+
+hr {
+    width: 100%;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.trending {
+    grid-area: trending;
+    margin-right: 20px;
+}
+
+.trending .card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.trending h5{
+    font-size: 1.1rem;
+}
+
+.trending img {
+    height: 60px;
+    width: 60px;
 }
