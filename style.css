@@ -1,3 +1,7 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
     height: 100vh;
     width: 100vw;
@@ -21,6 +25,11 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
+    transition: all .2s ease-in-out;
+}
+
+a:hover {
+    transform: scale(1.1);
 }
 
 img {
@@ -60,13 +69,18 @@ img {
     justify-content: space-around;
 }
 
-.profile-info img {
+.profile-info a {
     padding: 0 20px;
 }
 
-.profile-info :nth-child(2) {
-    height: 40px;
-    width: 40px;
+#pfp {
+    height: 50px;
+    width: 50px;
+}
+
+#bell {
+    height: 25px;
+    width: 25px;
 }
 
 .header .bottom {
@@ -75,6 +89,10 @@ img {
     justify-content: space-between;
     margin-top: 0;
     padding-top: 0;
+}
+
+.profile {
+    width: 50%;
 }
 
 .buttons {
@@ -90,6 +108,7 @@ button {
     color: white;
     background-color: lightblue;
     border: 1px solid lightblue;
+    margin: 0px 10px;
 }
 
 .profile {
@@ -141,6 +160,7 @@ input {
     gap: 10px;
     padding-top: 10px;
     padding-left: 10px;
+    padding-right: 20px;
 }
 
 .sidebar-title img {
