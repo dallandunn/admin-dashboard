@@ -12,27 +12,58 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* header */
 .header {
     border: 1px solid black;
     grid-area: header;
 }
 
+/* sidebar */
 .sidebar {
     border: 1px solid black;
     grid-area: sidebar;
+    background-color: lightblue;
+    color: white;
 }
 
 .sidebar-title {
     display: flex;
     align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.sidebar-title img {
+    height: 50px;
+    width: 50px;
+    padding-left: 25px;
 }
 
 .nav {
     font-size: 1.5rem;
     font-weight: 600px;
     display: grid;
+    gap: 20px;
+    padding-bottom: 50px;
 }
 
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav img {
+    height: 30px;
+    width: 30px;
+}
+
+/* content */
 .content {
     border: 1px solid black;
     grid-area: content;
